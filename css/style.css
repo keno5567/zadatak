@@ -1,0 +1,269 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.3em;
+}
+
+.kb-logo {
+  color: aqua;
+}
+
+h1 {
+  padding-bottom: 15px;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+#navbar {
+  background: #333;
+  color: #fff;
+  overflow: auto;
+}
+
+#navbar a {
+  color: #fff;
+}
+
+#navbar h1 {
+  float: left;
+  padding-top: 20px;
+  padding-left: 15px;
+}
+
+#navbar ul {
+  list-style: none;
+  float: right;
+}
+
+#navbar ul li {
+  float: left;
+}
+
+#navbar ul li a {
+  display: block;
+  padding: 20px;
+  text-align: center;
+}
+
+#navbar ul li a:hover {
+  background: #444;
+  color: aqua;
+}
+
+#home {
+  background: url(../slike/za\ home\ page.jpg) no-repeat center center/cover;
+  background-size: cover;
+  height: 100vh;
+  /* width: 100vh; */
+  /* height: 900px; */
+  /* padding-top: 500px; */
+}
+
+.naslov {
+  color: aqua;
+  text-align: center;
+  padding-top: 320px;
+  padding-bottom: 30px;
+}
+
+.opis-ispod {
+  text-align: center;
+  color: aqua;
+}
+
+#about {
+  background: red;
+  height: 100vh;
+}
+
+.text {
+  color: black;
+  padding-top: 50px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.ab-naslov {
+  color: black;
+  padding-top: 30px;
+  padding-left: 40px;
+  padding-right: 40px;
+  text-decoration: underline;
+}
+
+.container {
+  border-width: 2px;
+  border-style: solid;
+  width: 400px;
+  border-color: black;
+  padding-bottom: 30px;
+  position: relative;
+  top: 190px;
+  left: 750px;
+  text-align: center;
+}
+
+.poso {
+  font-family:Arial, Helvetica, sans-serif;
+  border: red 2px solid;
+  width: 150px;
+  padding: 20px;
+  margin-top: 100px;
+  margin-left: 850px;
+  text-align: center;
+}
+
+.lorem {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  border: orange 1px dotted;
+  width: 700px;
+  margin-top: 100px;
+  margin-left: 600px;
+  padding: 40px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.grid > .box1 {
+  /* height: 300px; */
+  background: url("/slike/prva\ slika.jpg");
+  background-size: cover;
+}
+
+.box1, .box2, .box3, .box4 {
+  background: url();
+  border: 1px blue solid;
+  border-radius: 10px;
+  height: 360px;
+  max-height: 50vh;
+}
+
+.box {
+  margin: 20px;
+}
+
+.mw-naslov {
+  text-align: center;
+  padding-top: 20px;
+}
+
+.box2 {
+  background: url("/slike/druga\ slika.jpg");
+  background-size: cover;
+}
+
+.box3 {
+  background: url("/slike/treca\ slika.jpg");
+  background-size: cover;
+}
+
+.box4 {
+  background: url("/slike/cetvrta\ slika.jpg");
+  background-size: cover;
+}
+
+a {
+  text-decoration: none;
+}
+
+#container {
+  margin: 20px auto;
+  max-width: 450px;
+  padding: 20px;
+}
+
+.forma {
+  background: skyblue;
+  padding: 20px 35px;
+  color: #333;
+}
+
+.prijava {
+  text-align: center;
+}
+
+
+.forma .forme {
+  margin-top: 20px;
+}
+
+.forma .forme label {
+  display: block;
+  color: #444;
+}
+
+.forma .forme input {
+  width: 100%;
+  padding: 10px;
+  border: #ddd 2px solid;
+  border-radius: 7px;
+}
+
+.forma .btnprijava {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-top: 15px;
+  background: lightgreen;
+  color: black;
+  cursor: pointer;
+}
+.forma .btnprijava:hover {
+  background: green;
+}
+
+.poruka {
+  color: #444;
+}
+
+#footer {
+  background: #333;
+  color: #fff;
+  height: 6rem;
+}
+
+.footercont {
+  display: flex;
+  justify-content: center;
+  height: 5rem;
+  align-items: center;
+}
+
+.icons .fa-brands {
+  margin-right: 5rem;
+  border: 2px #fff solid;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  line-height: 30px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.icons .fa-solid {
+  border: 2px #fff solid;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  line-height: 30px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.icons .fa-solid:hover {
+  background: cornflowerblue;
+}
+
+.icons .fa-brands:hover {
+  background: cornflowerblue;
+}
