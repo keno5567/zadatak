@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="reg.css">
+  <title>register</title>
+</head>
+<body>
+  <div class="custom-modal">
+ 
+    <form id="regForm">
+      <h2 class="regNaslov">Registration</h2>
+ 
+      <div>
+        <label for="korisnicko_ime">Username</label>
+        <input type="text" name="korisnicko_ime" id="full_name" placeholder="Username">
+      </div>
+ 
+      <div>
+        <label for="email">Email</label>
+        <input type="text" name="reg_email" id="email" placeholder="Email Address">
+      </div>
+ 
+      <div>
+        <label for="lozinka">Password</label>
+        <input type="password" name="reg_pass" id="password" placeholder="Password">
+      </div>
+
+ 
+      <div>
+        <button name="regBtn" type="button" id="regBtn" class="registerbtn">Register</button>
+      </div>
+    </form>
+  </div>
+
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.21.0/firebase-app.js";
+    import {getDatabase, set, get, update, remove, ref, child}
+    from "https://www.gstatic.com/firebasejs/9.21.0/firebase-database.js"
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+    apiKey: "AIzaSyACmLQXtDIWGGg9AWyThjDfL5CfByinaws",
+    authDomain: "skljs-95d37.firebaseapp.com",
+    projectId: "skljs-95d37",
+    storageBucket: "skljs-95d37.appspot.com",
+    messagingSenderId: "1018390858487",
+    appId: "1:1018390858487:web:1ae5c9bc3a537e4a1761f2",
+    measurementId: "G-JZRT9MMWM3"
+    };
+    
+    // Initialize Firebase
+    
+    const app = initializeApp(firebaseConfig);
+    const db = getDatabase();
+
+    var full_name = document.querySelector("#full_name");
+    var email = document.querySelector("#email");
+    var password = document.querySelector("#password");
+
+    var regBtn = document.querySelector("#regBtn");
+
+    function InsertData() {
+      set(ref(db, "Users/"), {
+        Username: full_name.value,
+        Email: email.value,
+        Password: password.value
+      })
+      .then(()=> {
+        location.href = 'home.html';
+      })
+      .catch((error)=>{
+        alert(error)
+      });
+    };
+
+    regBtn.addEventListener('click', InsertData);
+
+  </script>
+</body>
+</html>
+

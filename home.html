@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+  <title>zadatak2</title>
+  <link rel="stylesheet" href="home.css">
+</head>
+<body> 
+  <ul> 
+    <li><a href="#home">Home</a></li> 
+     <li class="dropdown">
+       <a href="javascript:void(0)" class="dropbtn">Profile</a>
+      <div class="dropdown-content"> 
+        <a href="#">Edit</a>
+      </div>
+    </li>  
+    <li class="logout" id="logOutBtn"><a href="#logout">Logout</a></li>
+  </ul>
+
+  <!-- <div id="enterDetails">
+    <h1>Enter details</h1>
+
+    <h4>ID</h4> 
+    <input id="enterID" type="text"> 
+
+    <h4>Name</h4> 
+    <input id="enterName" type="text"> 
+
+    <h4>Age</h4> 
+    <input id="enterAge" type="number"> <br><br>
+
+    <button id="insert">INSERT</button>
+    <button id="update">UPDATE</button>
+    <button id="remove">REMOVE</button> <br><br>
+</div>
+
+<div id="findDetails">
+    <h1>Find by ID</h1>
+    <h4>ID</h4>
+    <input id="findID" type="text"> <br><br>
+    <button id="find">FIND</button>
+    <h3 id="findName" type="text"></h3>
+    <h3 id="findAge" type="number"></h3> <br><br>
+</div> -->
+
+  <div>
+    <h1 class="sma">Write whatever you want</h1>
+  <div class="container">
+    <div class="left">
+      <form id="form">
+        <label for="" class="wyph">Write your post here</label>
+        <br><br>
+        <textarea name="" id="textInput" cols="30" rows="10"></textarea>
+        <br><br>
+        <div id="msg"></div>
+        <button type="submit" class="pbtn" id="post">Post</button> 
+        <!-- <button type="submit" class="pbtn">Edit</button>
+        <button type="submit" class="rbtn">Remove</button>  -->
+      </form>
+    </div>
+    <div class="right">
+      <h3>Your posts here</h3>
+      <div id="posts">
+        <div>
+          <p>Post 1</p>
+          <button onclick="editBtn(this)" type="submit" class="ebtn" id="editbtn">Edit</button>
+          <button onclick="removeBtn(this)" type="submit" class="rbtn" id="removebtn">Remove</button>
+          <span class="options">
+          </span> 
+        </div>
+        <div>
+          <p>Post 2</p>
+          <button type="submit" class="ebtn">Edit</button>
+          <button type="submit" class="rbtn">Remove</button> 
+          <span class="options">
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.21.0/firebase-app.js";
+  import { getAuth, signOut 
+  } from "https://www.gstatic.com/firebasejs/9.21.0/firebase-auth.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+  
+  // Your web app's Firebase configuration
+  const firebaseConfig = {
+  apiKey: "AIzaSyACmLQXtDIWGGg9AWyThjDfL5CfByinaws",
+  authDomain: "skljs-95d37.firebaseapp.com",
+  projectId: "skljs-95d37",
+  storageBucket: "skljs-95d37.appspot.com",
+  messagingSenderId: "1018390858487",
+  appId: "1:1018390858487:web:1ae5c9bc3a537e4a1761f2",
+  measurementId: "G-JZRT9MMWM3"
+};
+  
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  
+  import {getDatabase, set, get, update, remove, ref, child}
+  from "https://www.gstatic.com/firebasejs/9.21.0/firebase-database.js"
+  
+  const db = getDatabase();
+  const auth = getAuth();
+  
+  var textInput = document.querySelector("#textInput");
+  // var enterName = document.querySelector("#enterName");
+  // var enterAge = document.querySelector("#enterAge");
+  // var findID = document.querySelector('#findID');
+  // var findName = document.querySelector("#findName");
+  // var findAge = document.querySelector("#findAge");
+  
+  
+  var postBtn = document.querySelector("#post");
+  var editBtn = document.querySelector("#edit");
+  var removeBtn = document.querySelector("#removebtn");
+  // var findBtn = document.querySelector("#find");
+  
+  function InsertDat() {
+    
+  }
+  
+  function FindData() {
+    
+  }
+  
+  function UpdateData() {
+    
+  }
+  
+  function RemoveData() {
+    
+  }
+  
+  const logoutbtn = document.querySelector('.logout')
+  logoutbtn.addEventListener('click', () => {
+    signOut(auth)
+      .then(() => {
+        location.href = 'login.html';
+      })
+      .catch((err) => {
+        console.log(err.message)
+      })
+  })
+
+  // insertBtn.addEventListener('click', InsertData);
+  // updateBtn.addEventListener('click', UpdateData);
+  // removeBtn.addEventListener('click', RemoveData);
+  // findBtn.addEventListener('click', FindData);
+   </script>
+
+<script src="main.js"></script>
+</body>
+</html>
